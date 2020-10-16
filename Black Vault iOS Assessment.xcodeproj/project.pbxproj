@@ -15,6 +15,8 @@
 		3A2812ED2539B91000FECD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2812EB2539B91000FECD74 /* LaunchScreen.storyboard */; };
 		3A2812F72539C85B00FECD74 /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2812F62539C85B00FECD74 /* JobsTableViewCell.swift */; };
 		3A2812FA2539CBB300FECD74 /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2812F92539CBB300FECD74 /* JobTableViewController.swift */; };
+		3A2812FD2539D8F800FECD74 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2812FC2539D8F800FECD74 /* Jobs.swift */; };
+		3A2812FF2539D96000FECD74 /* DataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A2812FE2539D96000FECD74 /* DataList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3A2812EE2539B91000FECD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2812F62539C85B00FECD74 /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
 		3A2812F92539CBB300FECD74 /* JobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
+		3A2812FC2539D8F800FECD74 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		3A2812FE2539D96000FECD74 /* DataList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		3A2812DF2539B90D00FECD74 /* Black Vault iOS Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				3A2812FB2539D8C400FECD74 /* HelperClasses */,
 				3A2812F82539C86F00FECD74 /* TableView */,
 				3A2812E02539B90D00FECD74 /* AppDelegate.swift */,
 				3A2812E22539B90D00FECD74 /* SceneDelegate.swift */,
@@ -79,6 +84,15 @@
 				3A2812F92539CBB300FECD74 /* JobTableViewController.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		3A2812FB2539D8C400FECD74 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3A2812FC2539D8F800FECD74 /* Jobs.swift */,
+				3A2812FE2539D96000FECD74 /* DataList.plist */,
+			);
+			path = HelperClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,7 @@
 			files = (
 				3A2812ED2539B91000FECD74 /* LaunchScreen.storyboard in Resources */,
 				3A2812EA2539B91000FECD74 /* Assets.xcassets in Resources */,
+				3A2812FF2539D96000FECD74 /* DataList.plist in Resources */,
 				3A2812E82539B90D00FECD74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +170,7 @@
 				3A2812E52539B90D00FECD74 /* ViewController.swift in Sources */,
 				3A2812F72539C85B00FECD74 /* JobsTableViewCell.swift in Sources */,
 				3A2812FA2539CBB300FECD74 /* JobTableViewController.swift in Sources */,
+				3A2812FD2539D8F800FECD74 /* Jobs.swift in Sources */,
 				3A2812E12539B90D00FECD74 /* AppDelegate.swift in Sources */,
 				3A2812E32539B90D00FECD74 /* SceneDelegate.swift in Sources */,
 			);

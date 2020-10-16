@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         LoginButton.layer.cornerRadius = 10
         LoginButton.layer.borderWidth = 1
         LoginButton.layer.borderColor = UIColor.black.cgColor
+        
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "EEEE d MMMM"
+        let dateString = df.string(from: date)
+        CurrentDateLabel.text = dateString
     }
 
 
