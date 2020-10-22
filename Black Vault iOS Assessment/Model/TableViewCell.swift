@@ -20,12 +20,29 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        self.JobsImageView.layer.masksToBounds = true
+        self.JobsImageView.layer.cornerRadius = self.JobsImageView.frame.width/19.0
+        
+        JobsRateView?.layer.masksToBounds = true
+//        JobsRateView?.layer.cornerRadius = 20.0
+//        JobsRateView?.roundCorners(corners: [.topLeft, .topRight], radius: 30)
+        //MARK:- Corner Radius of only two side of UIViews
+        self.roundCorners(view: JobsRateView, corners: [.topLeft], radius: 10.0)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    //MARK:- Corner Radius of only two side of UIViews
+    func roundCorners(view :UIView, corners: UIRectCorner, radius: CGFloat){
+            let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            view.layer.mask = mask
     }
 
 }

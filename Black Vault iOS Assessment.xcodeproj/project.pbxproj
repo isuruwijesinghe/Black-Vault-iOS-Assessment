@@ -19,6 +19,7 @@
 		3A2812FF2539D96000FECD74 /* DataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A2812FE2539D96000FECD74 /* DataList.plist */; };
 		3A8D087025419C21009BE48E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D086F25419C21009BE48E /* TableViewCell.xib */; };
 		3A8D08722541A850009BE48E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08712541A850009BE48E /* TableViewCell.swift */; };
+		3A8D087425420592009BE48E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D087325420592009BE48E /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3A2812FE2539D96000FECD74 /* DataList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataList.plist; sourceTree = "<group>"; };
 		3A8D086F25419C21009BE48E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		3A8D08712541A850009BE48E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3A8D087325420592009BE48E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				3A2812FC2539D8F800FECD74 /* Jobs.swift */,
 				3A2812FE2539D96000FECD74 /* DataList.plist */,
+				3A8D087325420592009BE48E /* LocationService.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				3A2812E52539B90D00FECD74 /* ViewController.swift in Sources */,
 				3A8D08722541A850009BE48E /* TableViewCell.swift in Sources */,
+				3A8D087425420592009BE48E /* LocationService.swift in Sources */,
 				3A2812F72539C85B00FECD74 /* JobsTableViewCell.swift in Sources */,
 				3A2812FA2539CBB300FECD74 /* JobTableViewController.swift in Sources */,
 				3A2812FD2539D8F800FECD74 /* Jobs.swift in Sources */,
