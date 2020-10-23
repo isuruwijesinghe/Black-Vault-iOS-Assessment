@@ -51,7 +51,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-sS-ugl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-sS-ugl">
                                 <rect key="frame" x="0.0" y="100" width="414" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
@@ -63,7 +63,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qho-FC-xL3" secondAttribute="trailing" constant="50" id="2vs-1g-7zn"/>
-                            <constraint firstItem="VdT-sS-ugl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="97I-N9-XJ4"/>
+                            <constraint firstItem="VdT-sS-ugl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="97I-N9-XJ4"/>
+                            <constraint firstItem="qho-FC-xL3" firstAttribute="leading" secondItem="sTf-dP-Cah" secondAttribute="trailing" constant="74" id="9XX-hL-lCe"/>
                             <constraint firstItem="sTf-dP-Cah" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CfU-Gf-tfg"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K0x-kI-GYs"/>
                             <constraint firstItem="sTf-dP-Cah" firstAttribute="top" secondItem="VdT-sS-ugl" secondAttribute="bottom" constant="20" id="T39-La-0Pl"/>
@@ -71,7 +72,7 @@
                             <constraint firstItem="VdT-sS-ugl" firstAttribute="top" secondItem="SYb-qq-5cm" secondAttribute="bottom" constant="1" id="Zm7-jk-8qm"/>
                             <constraint firstItem="sTf-dP-Cah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ewH-VD-0yO"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mtJ-8b-fTL"/>
-                            <constraint firstItem="VdT-sS-ugl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t3U-BA-OBq"/>
+                            <constraint firstItem="VdT-sS-ugl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="t3U-BA-OBq"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="yDa-zm-ZTv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

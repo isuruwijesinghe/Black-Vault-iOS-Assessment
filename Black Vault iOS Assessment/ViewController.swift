@@ -56,6 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         cell.JobNameView.text = objArray[indexPath.row].value(forKey: "title") as? String
         
+        cell.selectionStyle = .none
+        
         let shifts = objArray[indexPath.row].value(forKeyPath: "shifts") as! [NSDictionary]
         cell.JobsRateView.text = "   $ \(shifts[0].value(forKey: "earnings_per_hour") ?? "0")"
         
