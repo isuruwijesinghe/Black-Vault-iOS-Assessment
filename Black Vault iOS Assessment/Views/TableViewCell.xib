@@ -90,13 +90,6 @@
                     <constraint firstItem="EAJ-gt-Tte" firstAttribute="top" secondItem="f8j-be-y60" secondAttribute="topMargin" id="xl9-FA-pPM"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="JobNameView" destination="kWP-GN-bvk" id="zdh-vG-lVb"/>
-                <outlet property="JobsDistanceView" destination="luj-1O-Awn" id="GdE-ZD-gnT"/>
-                <outlet property="JobsImageView" destination="Pcv-7U-g8M" id="WR0-68-kAC"/>
-                <outlet property="JobsRateView" destination="OPR-8V-7mI" id="TGp-cx-DPU"/>
-                <outlet property="JobsTimeView" destination="i6i-kc-bPI" id="RKx-wY-95j"/>
-            </connections>
             <point key="canvasLocation" x="139" y="174"/>
         </tableViewCell>
     </objects>

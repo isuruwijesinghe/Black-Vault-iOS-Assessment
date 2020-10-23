@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,28 +52,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-sS-ugl">
-                                <rect key="frame" x="0.0" y="100" width="414" height="697"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-Bk-Mjl">
+                                <rect key="frame" x="0.0" y="109" width="414" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LRb-OO-hux">
+                                    <size key="itemSize" width="414" height="320"/>
+                                    <size key="estimatedItemSize" width="414" height="320"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="JobsCollectionViewCell" id="e5a-RG-Y1q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NAM-Q7-Y6V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S0F-dc-cof"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="inI-M2-Cny"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MWH-cV-5Xm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="51J-Zj-w1y"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qho-FC-xL3" secondAttribute="trailing" constant="50" id="2vs-1g-7zn"/>
-                            <constraint firstItem="VdT-sS-ugl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="97I-N9-XJ4"/>
                             <constraint firstItem="qho-FC-xL3" firstAttribute="leading" secondItem="sTf-dP-Cah" secondAttribute="trailing" constant="74" id="9XX-hL-lCe"/>
                             <constraint firstItem="sTf-dP-Cah" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CfU-Gf-tfg"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K0x-kI-GYs"/>
-                            <constraint firstItem="sTf-dP-Cah" firstAttribute="top" secondItem="VdT-sS-ugl" secondAttribute="bottom" constant="20" id="T39-La-0Pl"/>
+                            <constraint firstItem="ah9-Bk-Mjl" firstAttribute="top" secondItem="SYb-qq-5cm" secondAttribute="bottom" constant="10" id="TvI-1D-BCa"/>
                             <constraint firstItem="qho-FC-xL3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XoN-Vx-LHD"/>
-                            <constraint firstItem="VdT-sS-ugl" firstAttribute="top" secondItem="SYb-qq-5cm" secondAttribute="bottom" constant="1" id="Zm7-jk-8qm"/>
+                            <constraint firstItem="qho-FC-xL3" firstAttribute="top" secondItem="ah9-Bk-Mjl" secondAttribute="bottom" constant="20" id="Xtx-Ct-62x"/>
                             <constraint firstItem="sTf-dP-Cah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ewH-VD-0yO"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mtJ-8b-fTL"/>
-                            <constraint firstItem="VdT-sS-ugl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="t3U-BA-OBq"/>
+                            <constraint firstItem="ah9-Bk-Mjl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rjh-zr-kJd"/>
+                            <constraint firstItem="ah9-Bk-Mjl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uu5-0E-Wkf"/>
                             <constraint firstItem="SYb-qq-5cm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="yDa-zm-ZTv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,7 +98,7 @@
                     <connections>
                         <outlet property="CurrentDateLabel" destination="SYb-qq-5cm" id="Jqb-fw-U5P"/>
                         <outlet property="LoginButton" destination="qho-FC-xL3" id="X5A-J2-1LT"/>
-                        <outlet property="tableView" destination="VdT-sS-ugl" id="yXx-Uu-42C"/>
+                        <outlet property="collectionView" destination="ah9-Bk-Mjl" id="5jm-Fq-Stf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
