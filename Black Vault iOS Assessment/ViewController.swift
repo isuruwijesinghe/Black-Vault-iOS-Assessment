@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let location2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double((job_lng as! NSString).doubleValue), longitude: Double((job_lat as! NSString).doubleValue))
 
+        
         //setting the distance and job category 
         getLocation.run {
             if let location = $0 {
