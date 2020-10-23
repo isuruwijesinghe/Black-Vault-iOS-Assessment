@@ -58,7 +58,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let shifts = objArray[indexPath.row].value(forKeyPath: "shifts") as! [NSDictionary]
         cell.JobsRateView.text = "   $ \(shifts[0].value(forKey: "earnings_per_hour") ?? "0")"
-        cell.JobsDistanceView.text = "\(objArray[indexPath.row].value(forKeyPath: "job_category.description") ?? "") . 16KM"
         
         cell.JobsTimeView.text = "\(shifts[0].value(forKey: "start_time") ?? "0") - \(shifts[0].value(forKey: "end_time") ?? "0")"
         
@@ -69,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let location2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double((job_lng as! NSString).doubleValue), longitude: Double((job_lat as! NSString).doubleValue))
 
-        
+        //setting the distance and job category 
         getLocation.run {
             if let location = $0 {
 //                print("location = \(location.coordinate.latitude) \(location.coordinate.longitude)")
@@ -77,7 +76,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let coordinate2 = CLLocation(latitude: location2.latitude, longitude: location2.longitude)
 
                  let distanceInMeters = coordinate1.distance(from: coordinate2)
-                    print("location ---->",distanceInMeters)
+                print("location ---->",round(distanceInMeters/1000))
+                cell.JobsDistanceView.text = "\(self.objArray[indexPath.row].value(forKeyPath: "job_category.description") ?? "") . \(round(distanceInMeters/1000))KM"
             } else {
                 print("Get Location failed \(self.getLocation.didFailWithError)")
             }
