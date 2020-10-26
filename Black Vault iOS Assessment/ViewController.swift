@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let basedUrl: String = "https://temper.works/api/v1/contractor/shifts?dates=2020-10-25"
+    let basedUrl: String = "https://temper.works/api/v1/contractor/shifts?dates=2020-10-26"
     var objArray : [NSDictionary] = []
     
     let getLocation = GetLocation()
@@ -51,9 +51,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return objArray.count
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return objArray.count
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobsCollectionViewCell", for: indexPath) as! JobsCollectionViewCell
@@ -132,7 +132,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                  let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
 //                    print(json)
                     let applicationStateJson = json["data"] as? NSDictionary
-                    self.objArray = (applicationStateJson?["2020-10-25"] as? [NSDictionary])!
+                    self.objArray = (applicationStateJson?["2020-10-26"] as? [NSDictionary])!
                                     
                     DispatchQueue.main.async{
                         //reload table

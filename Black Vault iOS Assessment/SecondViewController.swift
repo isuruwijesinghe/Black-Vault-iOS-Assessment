@@ -10,11 +10,21 @@ import UIKit
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
+    let basedUrl: String = "https://angulartesting-8cd5c.firebaseio.com/content.json"
+    var objArray : [NSDictionary] = []
+    var tableObjArray : [NSDictionary] = []
     
-    var storyArray: [String] = ["Story 1","Story 2","Story 3","Story 4","Story 5","Story 6","Story 7","Story 8"]
-    var postArray: [String] = ["Post 1","Post 2","Post 3","Post 4","Post 5"]
+    var indexNumber: Int = 0
     
     var job_image = "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/186540.jpg"
+    
+    
+    var whichCollectionViewScrolled = "" {
+        willSet{
+            print(newValue)
+        }
+    }
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,41 +33,52 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
         // Do any additional setup after loading the view.
         
+        collectionView.tag = 1
+        tableView.tag = 2
+        
         collectionView.register(UINib(nibName: "StoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoryCollectionCell")
         
         tableView.rowHeight = 320
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
-
+        
+        getData(from: basedUrl)
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return storyArray.count
+        return objArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionCell", for: indexPath) as! StoryCollectionViewCell
-        cell.storyLabel.text = storyArray[indexPath.row]
+        cell.storyLabel.text = objArray[indexPath.row].value(forKey: "date") as? String
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-         if (indexPath.row == storyArray.count - 1 ) { //it's your last cell
-           //Load more data & reload your collection view
-            print("Scrolled to the last item")
-            job_image = "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/190044.jpg"
-            tableView.reloadData()
-         }
-    }
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postArray.count
+        if objArray.isEmpty{
+            return 0
+        }else{
+            tableObjArray = objArray[indexNumber].value(forKey: "content") as! [NSDictionary]
+            print("obj count ",tableObjArray.count)
+            return tableObjArray.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
+        cell.JobNameView.text = tableObjArray[indexPath.row].value(forKey: "title") as! String
         
-         let url = URL(string: job_image as! String)!
+        
+        let job_imageX = tableObjArray[indexPath.row].value(forKey: "photo") ?? "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/186540.jpg"
+        
+        let url = URL(string: job_imageX as! String )!
                     downloadImage(from: url)
                     getImageData(from: url) { data, response, error in
                     guard let data = data, error == nil else { return }
@@ -90,5 +111,86 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: - Data
+            
+            private func getData(from url: String){
+                
+                URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
+                    
+                    guard let data = data, error == nil else{
+                     print("something wrong")
+                        return
+                    }
+                    
+                    //data recieved
+                    do {
+                     let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+//                        print(json.count)
+                        self.objArray = json as? [NSDictionary] ?? []
+                        self.tableObjArray = self.objArray[0].value(forKey: "content") as! [NSDictionary]
+//                        let applicationStateJson = json["cotent"] as? NSDictionary
+//                        print(self.objArray.count)
+//                        self.objArray = (applicationStateJson?["2020-10-26"] as? [NSDictionary])!
+                                        
+                        DispatchQueue.main.async{
+                            //reload table
+                            self.collectionView.reloadData()
+                            self.tableView.reloadData()
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                        
+                    }
+                    
 
+                }).resume()
+                
+                
+                
+            }
+
+}
+
+extension SecondViewController: UIScrollViewDelegate {
+func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    
+
+    if let collectionView = scrollView as? UICollectionView {
+        
+        let index = Int(collectionView.contentOffset.x / (collectionView.bounds.size.width/2))
+        print("collectionview index", index)
+        indexNumber = index
+        tableView.reloadData()
+        
+        
+
+    }else if let tableView = scrollView as? UITableView{
+        
+        print("TableView", tableView.tag)
+        
+        let height = tableView.frame.size.height
+        let contentYoffset = tableView.contentOffset.y
+        let distanceFromBottom = tableView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            print(" you reached end of the table")
+            if objArray.count != indexNumber+1{
+                indexNumber += 1
+                collectionView.selectItem(at: [0, indexNumber], animated: false, scrollPosition: .centeredHorizontally)
+                collectionView.reloadData()
+                tableView.reloadData()
+            }else{
+                indexNumber = 0
+                collectionView.selectItem(at: [0, indexNumber], animated: false, scrollPosition: .centeredHorizontally)
+                collectionView.reloadData()
+                tableView.reloadData()
+            }
+            
+        }
+        
+    }else{
+        print("cant cast")
+    }
+}
 }

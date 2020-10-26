@@ -25,6 +25,12 @@
 		3A8D087A25456866009BE48E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D087925456866009BE48E /* SecondViewController.swift */; };
 		3A8D087C254568B9009BE48E /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D087B254568B9009BE48E /* StoryCollectionViewCell.xib */; };
 		3A8D087E2545696F009BE48E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D087D2545696F009BE48E /* StoryCollectionViewCell.swift */; };
+		3A8D08812546FFF2009BE48E /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D08802546FFF2009BE48E /* MenuCollectionViewCell.xib */; };
+		3A8D088425470729009BE48E /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088325470729009BE48E /* MenuCollectionViewCell.swift */; };
+		3A8D088625470AAD009BE48E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088525470AAD009BE48E /* MenuViewController.swift */; };
+		3A8D088825471A3F009BE48E /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D088725471A3F009BE48E /* MenuHeaderCell.xib */; };
+		3A8D088A25471AC3009BE48E /* MenuHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088925471AC3009BE48E /* MenuHeaderCollectionReusableView.swift */; };
+		3A8D088D2547244D009BE48E /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088C2547244D009BE48E /* menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		3A8D087925456866009BE48E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3A8D087B254568B9009BE48E /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		3A8D087D2545696F009BE48E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A8D08802546FFF2009BE48E /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A8D088325470729009BE48E /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A8D088525470AAD009BE48E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3A8D088725471A3F009BE48E /* MenuHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
+		3A8D088925471AC3009BE48E /* MenuHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		3A8D088C2547244D009BE48E /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 				3A2812E02539B90D00FECD74 /* AppDelegate.swift */,
 				3A2812E22539B90D00FECD74 /* SceneDelegate.swift */,
 				3A2812E42539B90D00FECD74 /* ViewController.swift */,
+				3A8D088525470AAD009BE48E /* MenuViewController.swift */,
 				3A2812E62539B90D00FECD74 /* Main.storyboard */,
 				3A2812E92539B91000FECD74 /* Assets.xcassets */,
 				3A2812EB2539B91000FECD74 /* LaunchScreen.storyboard */,
@@ -107,9 +120,11 @@
 		3A2812FB2539D8C400FECD74 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D088B2547242E009BE48E /* New Group */,
 				3A2812FC2539D8F800FECD74 /* Jobs.swift */,
 				3A2812FE2539D96000FECD74 /* DataList.plist */,
 				3A8D087325420592009BE48E /* LocationService.swift */,
+				3A8D088C2547244D009BE48E /* menu.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -119,12 +134,39 @@
 			children = (
 				3A8D08712541A850009BE48E /* TableViewCell.swift */,
 				3A8D086F25419C21009BE48E /* TableViewCell.xib */,
+				3A8D0882254706F5009BE48E /* Menu Views */,
+				3A8D087F2546FF6A009BE48E /* Jobs Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A8D087F2546FF6A009BE48E /* Jobs Views */ = {
+			isa = PBXGroup;
+			children = (
 				3A8D087525435238009BE48E /* JobsCollectionViewCell.swift */,
 				3A8D087725435286009BE48E /* JobsCollectionViewCell.xib */,
 				3A8D087B254568B9009BE48E /* StoryCollectionViewCell.xib */,
 				3A8D087D2545696F009BE48E /* StoryCollectionViewCell.swift */,
 			);
-			path = Views;
+			path = "Jobs Views";
+			sourceTree = "<group>";
+		};
+		3A8D0882254706F5009BE48E /* Menu Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D08802546FFF2009BE48E /* MenuCollectionViewCell.xib */,
+				3A8D088325470729009BE48E /* MenuCollectionViewCell.swift */,
+				3A8D088725471A3F009BE48E /* MenuHeaderCell.xib */,
+				3A8D088925471AC3009BE48E /* MenuHeaderCollectionReusableView.swift */,
+			);
+			path = "Menu Views";
+			sourceTree = "<group>";
+		};
+		3A8D088B2547242E009BE48E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +232,10 @@
 				3A8D087025419C21009BE48E /* TableViewCell.xib in Resources */,
 				3A2812EA2539B91000FECD74 /* Assets.xcassets in Resources */,
 				3A8D087C254568B9009BE48E /* StoryCollectionViewCell.xib in Resources */,
+				3A8D088825471A3F009BE48E /* MenuHeaderCell.xib in Resources */,
 				3A2812FF2539D96000FECD74 /* DataList.plist in Resources */,
 				3A2812E82539B90D00FECD74 /* Main.storyboard in Resources */,
+				3A8D08812546FFF2009BE48E /* MenuCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,14 +249,18 @@
 				3A2812E52539B90D00FECD74 /* ViewController.swift in Sources */,
 				3A8D08722541A850009BE48E /* TableViewCell.swift in Sources */,
 				3A8D087E2545696F009BE48E /* StoryCollectionViewCell.swift in Sources */,
+				3A8D088A25471AC3009BE48E /* MenuHeaderCollectionReusableView.swift in Sources */,
 				3A8D087425420592009BE48E /* LocationService.swift in Sources */,
+				3A8D088D2547244D009BE48E /* menu.swift in Sources */,
 				3A2812F72539C85B00FECD74 /* JobsTableViewCell.swift in Sources */,
 				3A8D087625435238009BE48E /* JobsCollectionViewCell.swift in Sources */,
 				3A2812FA2539CBB300FECD74 /* JobTableViewController.swift in Sources */,
+				3A8D088625470AAD009BE48E /* MenuViewController.swift in Sources */,
 				3A2812FD2539D8F800FECD74 /* Jobs.swift in Sources */,
 				3A2812E12539B90D00FECD74 /* AppDelegate.swift in Sources */,
 				3A8D087A25456866009BE48E /* SecondViewController.swift in Sources */,
 				3A2812E32539B90D00FECD74 /* SceneDelegate.swift in Sources */,
+				3A8D088425470729009BE48E /* MenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
