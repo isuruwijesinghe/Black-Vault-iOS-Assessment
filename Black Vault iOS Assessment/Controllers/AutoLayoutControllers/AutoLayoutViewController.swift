@@ -79,7 +79,6 @@ class AutoLayoutViewController: UIViewController {
     }
     
     fileprivate func setButtonControlls(){
-//        view.addSubview(previousButton)
 
         let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControle, nextButton])
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,7 +89,6 @@ class AutoLayoutViewController: UIViewController {
         
         
         NSLayoutConstraint.activate([
-//            previousButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             bottomStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bottomStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),

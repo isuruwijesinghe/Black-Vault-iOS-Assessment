@@ -10,8 +10,25 @@ import UIKit
 
 class PageCell: UICollectionViewCell {
     
+    var page: Page? {
+        didSet{
+            guard let unwrappedPage = page else {
+                return
+            }
+            bearImageView.image = UIImage(named: unwrappedPage.imageName)
+            
+            
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.titleText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
+            
+            attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for the auto layout contraints and have loards of fun and etc with lorum ipsum xD see you soon", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+            
+            titleTextView.attributedText = attributedText
+            titleTextView.textAlignment = .center
+        }
+    }
+    
     //image View
-    let bearImageView: UIImageView = {
+    private let bearImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "bearImage"))
         // you must enable this to put autolayouts
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,16 +36,13 @@ class PageCell: UICollectionViewCell {
         return imageView
     }()
     
-    let titleTextView: UITextView = {
+    private let titleTextView: UITextView = {
         let textView = UITextView()
         // you must enable this to put autolayouts
         textView.translatesAutoresizingMaskIntoConstraints = false
         
-        let attributedText = NSMutableAttributedString(string: "Hi this is an autoLayout app !", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
-        
-        attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for the auto layout contraints and have loards of fun and etc with lorum ipsum xD see you soon", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
-        
-        textView.attributedText = attributedText
+    
+//        textView.attributedText = attributedText
         textView.textAlignment = .center
         textView.isEditable = false
         textView.isScrollEnabled = false
