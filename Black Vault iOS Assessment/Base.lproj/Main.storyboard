@@ -317,12 +317,22 @@
                                     <segue destination="z1k-s7-OkT" kind="show" id="RU3-Qp-jFi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7p-me-kgH">
+                                <rect key="frame" x="0.0" y="519" width="414" height="30"/>
+                                <state key="normal" title="Auto Layout"/>
+                                <connections>
+                                    <segue destination="b7y-9Y-R4t" kind="show" id="iZ6-Mv-ZtF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="M7p-me-kgH" firstAttribute="top" secondItem="4US-3b-XQL" secondAttribute="bottom" constant="20" id="50t-Je-MdQ"/>
                             <constraint firstItem="nDm-Qq-dml" firstAttribute="centerY" secondItem="thB-BZ-Lkf" secondAttribute="centerY" id="DKp-iw-5rS"/>
                             <constraint firstItem="nDm-Qq-dml" firstAttribute="centerX" secondItem="thB-BZ-Lkf" secondAttribute="centerX" id="Q4P-dK-7x1"/>
+                            <constraint firstItem="M7p-me-kgH" firstAttribute="leading" secondItem="00u-Nj-zw4" secondAttribute="leading" id="RjX-hz-GuU"/>
                             <constraint firstItem="4US-3b-XQL" firstAttribute="centerX" secondItem="thB-BZ-Lkf" secondAttribute="centerX" id="Wsr-A7-uXg"/>
+                            <constraint firstItem="00u-Nj-zw4" firstAttribute="trailing" secondItem="M7p-me-kgH" secondAttribute="trailing" id="ZyO-zS-qby"/>
                             <constraint firstItem="4US-3b-XQL" firstAttribute="top" secondItem="nDm-Qq-dml" secondAttribute="bottom" constant="33" id="dNU-qs-P64"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="00u-Nj-zw4"/>
@@ -332,6 +342,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKo-6X-K3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="816"/>
+        </scene>
+        <!--Auto Layout View Controller-->
+        <scene sceneID="xq1-bK-xYo">
+            <objects>
+                <viewController id="b7y-9Y-R4t" customClass="AutoLayoutViewController" customModule="Black_Vault_iOS_Assessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4T-BA-90P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fC5-so-UBX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IjF-al-wJ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9T-sZ-SyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-798" y="1552"/>
         </scene>
         <!--Ikman View Controller-->
         <scene sceneID="Cbm-5u-fXV">
@@ -664,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br9-VO-A7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="1796.6517857142856"/>
+            <point key="canvasLocation" x="136" y="1586"/>
         </scene>
         <!--Title-->
         <scene sceneID="1Gy-S7-EuR">

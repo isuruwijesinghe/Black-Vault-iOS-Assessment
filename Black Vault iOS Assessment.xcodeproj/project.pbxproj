@@ -36,6 +36,7 @@
 		3A8D08962547E51C009BE48E /* ItemReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D08952547E51C009BE48E /* ItemReusableCell.xib */; };
 		3A8D08982547E69F009BE48E /* ItemCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08972547E69F009BE48E /* ItemCollectionReusableView.swift */; };
 		3A8D089A2547E718009BE48E /* IkmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08992547E718009BE48E /* IkmanViewController.swift */; };
+		3A8D089C254936B4009BE48E /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D089B254936B3009BE48E /* AutoLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		3A8D08952547E51C009BE48E /* ItemReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemReusableCell.xib; sourceTree = "<group>"; };
 		3A8D08972547E69F009BE48E /* ItemCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionReusableView.swift; sourceTree = "<group>"; };
 		3A8D08992547E718009BE48E /* IkmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkmanViewController.swift; sourceTree = "<group>"; };
+		3A8D089B254936B3009BE48E /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				3A8D088525470AAD009BE48E /* MenuViewController.swift */,
 				3A8D087925456866009BE48E /* SecondViewController.swift */,
 				3A8D08992547E718009BE48E /* IkmanViewController.swift */,
+				3A8D089B254936B3009BE48E /* AutoLayoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				3A2812E12539B90D00FECD74 /* AppDelegate.swift in Sources */,
 				3A8D089A2547E718009BE48E /* IkmanViewController.swift in Sources */,
 				3A8D087A25456866009BE48E /* SecondViewController.swift in Sources */,
+				3A8D089C254936B4009BE48E /* AutoLayoutViewController.swift in Sources */,
 				3A2812E32539B90D00FECD74 /* SceneDelegate.swift in Sources */,
 				3A8D088425470729009BE48E /* MenuCollectionViewCell.swift in Sources */,
 				3A8D08932547E2D4009BE48E /* IkmanCollectionViewCell.swift in Sources */,

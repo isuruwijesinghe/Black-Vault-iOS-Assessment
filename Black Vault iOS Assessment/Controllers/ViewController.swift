@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let basedUrl: String = "https://temper.works/api/v1/contractor/shifts?dates=2020-10-27"
+    let basedUrl: String = "https://temper.works/api/v1/contractor/shifts?dates=2020-10-28"
     var objArray : [NSDictionary] = []
     
     let getLocation = GetLocation()
@@ -132,7 +132,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                  let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
 //                    print(json)
                     let applicationStateJson = json["data"] as? NSDictionary
-                    self.objArray = (applicationStateJson?["2020-10-27"] as? [NSDictionary])!
+                    self.objArray = (applicationStateJson?["2020-10-28"] as? [NSDictionary])!
                                     
                     DispatchQueue.main.async{
                         //reload table
