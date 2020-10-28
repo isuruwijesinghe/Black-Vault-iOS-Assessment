@@ -10,6 +10,23 @@ import UIKit
 
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        coordinator.animate(alongsideTransition: { (_) in
+            self.collectionViewLayout.invalidateLayout()
+            
+            if self.pageControle.currentPage == 0 {
+                self.collectionView.contentOffset = .zero
+            }else {
+                let indexPath = IndexPath(item: self.pageControle.currentPage, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            }
+            
+        }) { (_) in
+            
+        }
+//        collectionViewLayout.invalidateLayout()
+    }
     
     let pages = [
         Page(imageName: "bearImage", titleText: "Hi this is an autoLayout app !"),
