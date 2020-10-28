@@ -16,7 +16,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var indexNumber: Int = 0
     
-    var job_image = "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/186540.jpg"
+//    var job_image = "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/186540.jpg"
     
     
     var whichCollectionViewScrolled = "" {

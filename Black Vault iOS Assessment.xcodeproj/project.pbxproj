@@ -31,6 +31,11 @@
 		3A8D088825471A3F009BE48E /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D088725471A3F009BE48E /* MenuHeaderCell.xib */; };
 		3A8D088A25471AC3009BE48E /* MenuHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088925471AC3009BE48E /* MenuHeaderCollectionReusableView.swift */; };
 		3A8D088D2547244D009BE48E /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D088C2547244D009BE48E /* menu.swift */; };
+		3A8D08912547D838009BE48E /* IkmanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D08902547D838009BE48E /* IkmanCollectionViewCell.xib */; };
+		3A8D08932547E2D4009BE48E /* IkmanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08922547E2D4009BE48E /* IkmanCollectionViewCell.swift */; };
+		3A8D08962547E51C009BE48E /* ItemReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D08952547E51C009BE48E /* ItemReusableCell.xib */; };
+		3A8D08982547E69F009BE48E /* ItemCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08972547E69F009BE48E /* ItemCollectionReusableView.swift */; };
+		3A8D089A2547E718009BE48E /* IkmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08992547E718009BE48E /* IkmanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		3A8D088725471A3F009BE48E /* MenuHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
 		3A8D088925471AC3009BE48E /* MenuHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		3A8D088C2547244D009BE48E /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		3A8D08902547D838009BE48E /* IkmanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IkmanCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A8D08922547E2D4009BE48E /* IkmanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkmanCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A8D08952547E51C009BE48E /* ItemReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemReusableCell.xib; sourceTree = "<group>"; };
+		3A8D08972547E69F009BE48E /* ItemCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionReusableView.swift; sourceTree = "<group>"; };
+		3A8D08992547E718009BE48E /* IkmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkmanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,18 +102,16 @@
 		3A2812DF2539B90D00FECD74 /* Black Vault iOS Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D088F2547D7F9009BE48E /* Controllers */,
 				3A8D086925419563009BE48E /* Views */,
 				3A2812FB2539D8C400FECD74 /* HelperClasses */,
 				3A2812F82539C86F00FECD74 /* TableView */,
 				3A2812E02539B90D00FECD74 /* AppDelegate.swift */,
 				3A2812E22539B90D00FECD74 /* SceneDelegate.swift */,
-				3A2812E42539B90D00FECD74 /* ViewController.swift */,
-				3A8D088525470AAD009BE48E /* MenuViewController.swift */,
 				3A2812E62539B90D00FECD74 /* Main.storyboard */,
 				3A2812E92539B91000FECD74 /* Assets.xcassets */,
 				3A2812EB2539B91000FECD74 /* LaunchScreen.storyboard */,
 				3A2812EE2539B91000FECD74 /* Info.plist */,
-				3A8D087925456866009BE48E /* SecondViewController.swift */,
 			);
 			path = "Black Vault iOS Assessment";
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 		3A8D086925419563009BE48E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D088E2547D7DC009BE48E /* Ikman Views */,
 				3A8D08712541A850009BE48E /* TableViewCell.swift */,
 				3A8D086F25419C21009BE48E /* TableViewCell.xib */,
 				3A8D0882254706F5009BE48E /* Menu Views */,
@@ -167,6 +176,28 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3A8D088E2547D7DC009BE48E /* Ikman Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D08902547D838009BE48E /* IkmanCollectionViewCell.xib */,
+				3A8D08922547E2D4009BE48E /* IkmanCollectionViewCell.swift */,
+				3A8D08952547E51C009BE48E /* ItemReusableCell.xib */,
+				3A8D08972547E69F009BE48E /* ItemCollectionReusableView.swift */,
+			);
+			path = "Ikman Views";
+			sourceTree = "<group>";
+		};
+		3A8D088F2547D7F9009BE48E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A2812E42539B90D00FECD74 /* ViewController.swift */,
+				3A8D088525470AAD009BE48E /* MenuViewController.swift */,
+				3A8D087925456866009BE48E /* SecondViewController.swift */,
+				3A8D08992547E718009BE48E /* IkmanViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +263,10 @@
 				3A8D087025419C21009BE48E /* TableViewCell.xib in Resources */,
 				3A2812EA2539B91000FECD74 /* Assets.xcassets in Resources */,
 				3A8D087C254568B9009BE48E /* StoryCollectionViewCell.xib in Resources */,
+				3A8D08912547D838009BE48E /* IkmanCollectionViewCell.xib in Resources */,
 				3A8D088825471A3F009BE48E /* MenuHeaderCell.xib in Resources */,
 				3A2812FF2539D96000FECD74 /* DataList.plist in Resources */,
+				3A8D08962547E51C009BE48E /* ItemReusableCell.xib in Resources */,
 				3A2812E82539B90D00FECD74 /* Main.storyboard in Resources */,
 				3A8D08812546FFF2009BE48E /* MenuCollectionViewCell.xib in Resources */,
 			);
@@ -249,6 +282,7 @@
 				3A2812E52539B90D00FECD74 /* ViewController.swift in Sources */,
 				3A8D08722541A850009BE48E /* TableViewCell.swift in Sources */,
 				3A8D087E2545696F009BE48E /* StoryCollectionViewCell.swift in Sources */,
+				3A8D08982547E69F009BE48E /* ItemCollectionReusableView.swift in Sources */,
 				3A8D088A25471AC3009BE48E /* MenuHeaderCollectionReusableView.swift in Sources */,
 				3A8D087425420592009BE48E /* LocationService.swift in Sources */,
 				3A8D088D2547244D009BE48E /* menu.swift in Sources */,
@@ -258,9 +292,11 @@
 				3A8D088625470AAD009BE48E /* MenuViewController.swift in Sources */,
 				3A2812FD2539D8F800FECD74 /* Jobs.swift in Sources */,
 				3A2812E12539B90D00FECD74 /* AppDelegate.swift in Sources */,
+				3A8D089A2547E718009BE48E /* IkmanViewController.swift in Sources */,
 				3A8D087A25456866009BE48E /* SecondViewController.swift in Sources */,
 				3A2812E32539B90D00FECD74 /* SceneDelegate.swift in Sources */,
 				3A8D088425470729009BE48E /* MenuCollectionViewCell.swift in Sources */,
+				3A8D08932547E2D4009BE48E /* IkmanCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

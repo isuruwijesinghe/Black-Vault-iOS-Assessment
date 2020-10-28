@@ -25,9 +25,10 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let menuItems = Menu(title: "Your Deets", names: ["Update Profile","Change passcode","Notifications"], image: ["faceIcon", "passcodeIcon", "notifiactionIcon"])
         let menuItems1 = Menu(title: "privacy", names: ["Privacy Policy","Terms & Coditions", "Request you data"], image: ["lockIcon", "privacyIcon", "dataIcon"])
         let menuItems2 = Menu(title: "Support", names: ["FAQs"], image: ["faqIcon"])
-        menuArray.append(menuItems)
-        menuArray.append(menuItems1)
-        menuArray.append(menuItems2)
+//        menuArray.append(menuItems)
+//        menuArray.append(menuItems1)
+//        menuArray.append(menuItems2)
+        menuArray.append(contentsOf: [menuItems, menuItems1, menuItems2])
         
     }
     
