@@ -40,6 +40,7 @@
 		3A8D089E2549706E009BE48E /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D089D2549706D009BE48E /* SwipingController.swift */; };
 		3A8D08A125497974009BE48E /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08A025497974009BE48E /* PageCell.swift */; };
 		3A8D08A3254983C0009BE48E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08A2254983C0009BE48E /* Page.swift */; };
+		3A8D08A6254BEADC009BE48E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D08A5254BEADC009BE48E /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		3A8D089D2549706D009BE48E /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		3A8D08A025497974009BE48E /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3A8D08A2254983C0009BE48E /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		3A8D08A5254BEADC009BE48E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		3A2812DF2539B90D00FECD74 /* Black Vault iOS Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D08A4254BE9BB009BE48E /* ViewModel */,
 				3A8D088F2547D7F9009BE48E /* Controllers */,
 				3A8D086925419563009BE48E /* Views */,
 				3A2812FB2539D8C400FECD74 /* HelperClasses */,
@@ -212,6 +215,14 @@
 			path = AutoLayoutControllers;
 			sourceTree = "<group>";
 		};
+		3A8D08A4254BE9BB009BE48E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D08A5254BEADC009BE48E /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,6 +323,7 @@
 				3A2812E32539B90D00FECD74 /* SceneDelegate.swift in Sources */,
 				3A8D088425470729009BE48E /* MenuCollectionViewCell.swift in Sources */,
 				3A8D08932547E2D4009BE48E /* IkmanCollectionViewCell.swift in Sources */,
+				3A8D08A6254BEADC009BE48E /* MainViewModel.swift in Sources */,
 				3A8D08A125497974009BE48E /* PageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
