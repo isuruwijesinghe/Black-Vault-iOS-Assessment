@@ -24,11 +24,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow()
 
         window = UIWindow(windowScene: windowScene)
+        
+        let mainController = MainViewController()
 
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let swipingController = SwipingController(collectionViewLayout: layout)
-        window?.rootViewController = swipingController
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        let swipingController = SwipingController(collectionViewLayout: layout)
+        window?.rootViewController = mainController
         window?.makeKeyAndVisible()
     }
 
